@@ -7,7 +7,7 @@ echo "Downloading firmware"
 if ! wget https://github.com/Koenkk/Z-Stack-firmware/blob/master/coordinator/Z-Stack_Home_1.2/bin/default/CC2531_DEFAULT_20211115.zip?raw=true; then echo "firmware not found" && exit 1; fi
 
 echo "unziping"
-ls -l
+mv CC2531_DEFAULT_20211115.zip?raw=true CC2531_DEFAULT_20211115.zip
 if ! 7z x CC2531_DEFAULT_20211115.zip; then echo "unzip failed" && exit 1; fi
 
 echo "backup firmware"
